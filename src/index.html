@@ -1,0 +1,97 @@
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/c2054d9afc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Moment 5</title>
+</head>
+
+<body>
+   
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+        
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="innermodal"></div>
+          </div>
+        
+        </div>
+    <div class="container">
+            <h1>Moment 5 - Webbtjänster</h1>
+            <h2><i class="fas fa-list"></i> Kurser jag läst</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kursnamn</th>
+                        <th>Kurskod</th>
+                        <th>Progression</th>
+                        <th>Kursplan</th>
+                        <th>Ändra / Ta bort</th>
+                    
+                    </tr>
+                    <tbody id="courseList">
+
+                    <tr>
+                            <td>Kurskod</td>
+                            <td>Kursnamn</td>
+                            <td>Progression</td>
+                            <td>Kursplan</td>
+                        
+                        </tr>
+                        <tr>
+                                <td>Kurskod</td>
+                                <td>Kursnamn</td>
+                                <td>Progression</td>
+                                <td>Kursplan</td>
+                            
+                            </tr>
+                            <tr>
+                                    <td>Kurskod</td>
+                                    <td>Kursnamn</td>
+                                    <td>Progression</td>
+                                    <td> <a href="#"><i class="fas fa-link"></i> Kursplan</a> </td>
+                                
+                                </tr>
+                            </tbody>
+                </thead>
+                <tbody id="coursesOutput"></tbody>
+            </table>
+
+        <section>
+                <h2><i class="fa fa-pen"></i> Lägg till kurs</h2>
+              
+                <label>
+                    Kurskod: <br>
+                    <input type="text" name="code" id="code" required/>
+                </label>
+                <label >
+                    Kursnamn: <br>
+                    <input type="text" name="name" id="name" required/>
+                </label>
+                <label>
+                    Progression: <br>
+                    <input type="text" name="progression" id="progression"  required/>
+                </label>
+                <label >
+                    Kursplan: <br>
+                    <input type="text" name="syllabus" id="syllabus" required/>
+                </label>
+                <input type="submit" value="Lägg till" id="submitbutton" class="btn btn-blue">
+            </section>
+    
+</div>
+<footer>
+    Webbutveckling III <br>
+    Greta Samuelsson - 2019
+</footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
