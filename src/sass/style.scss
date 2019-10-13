@@ -50,20 +50,22 @@ label {
     float: left;
     font-weight: bold;
 
-    &:nth-child(even) {
+    &:nth-child(odd) {
         
     float: right;
     }
 }
 
-input[type=text] {
+input[type=text], select {
     padding: 10px;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 25px;
- 
-   
 }
+
+
+
+
 
 .container {
     width: 98%;

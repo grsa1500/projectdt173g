@@ -1,6 +1,6 @@
 "use strict";
 
-const url = "https://localhost/restAPI/webservice.php/courses";
+const url = "http://studenter.miun.se/~grsa1500/dt173g/moment5/part1/webservice.php/courses";
 document.getElementById("submitbutton").addEventListener("click", addCourse);
 
 window.onload = loadCourseList;
@@ -44,7 +44,7 @@ function addCourse() {
         });
 
 
-console.log(jsonStr);
+
         fetch(url, {
             method: 'POST',
             mode: 'cors',
@@ -100,17 +100,25 @@ console.log(jsonStr);
             innermodal.innerHTML = `<section>
     <h2><i class="fa fa-cog"></i> Ändra kurs</h2>
   
-    <label>
-        Kurskod: <br>
-        <input type="text" name="codeedit" id="codeedit" value="${code}" required/>
-    </label>
+   
     <label >
         Kursnamn: <br>
         <input type="text" name="nameedit" id="nameedit" value="${name}" required/>
     </label>
+     <label>
+        Kurskod: <br>
+        <input type="text" name="codeedit" id="codeedit" value="${code}" required/>
+    </label>
     <label>
         Progression: <br>
-        <input type="text" name="progressionedit" value="${progression}" id="progressionedit"  required/>
+        <select id="progressionedit">
+            
+
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+
+      </select>
     </label>
     <label >
         Kursplan: <br>
@@ -118,6 +126,10 @@ console.log(jsonStr);
     </label>
     <input type="submit" value="Ändra" onclick="editCourse(${course.id})"  id="editbutton" class="btn btn-blue">
 </section>`;
+
+let select = document.getElementById('progressionedit');
+
+select.value = progression;
                   
           })
           

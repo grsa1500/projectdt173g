@@ -38,27 +38,7 @@
                     </tr>
                     <tbody id="courseList">
 
-                    <tr>
-                            <td>Kurskod</td>
-                            <td>Kursnamn</td>
-                            <td>Progression</td>
-                            <td>Kursplan</td>
-                        
-                        </tr>
-                        <tr>
-                                <td>Kurskod</td>
-                                <td>Kursnamn</td>
-                                <td>Progression</td>
-                                <td>Kursplan</td>
-                            
-                            </tr>
-                            <tr>
-                                    <td>Kurskod</td>
-                                    <td>Kursnamn</td>
-                                    <td>Progression</td>
-                                    <td> <a href="#"><i class="fas fa-link"></i> Kursplan</a> </td>
-                                
-                                </tr>
+                   
                             </tbody>
                 </thead>
                 <tbody id="coursesOutput"></tbody>
@@ -67,17 +47,23 @@
         <section>
                 <h2><i class="fa fa-pen"></i> Lägg till kurs</h2>
               
-                <label>
-                    Kurskod: <br>
-                    <input type="text" name="code" id="code" required/>
-                </label>
+               
                 <label >
                     Kursnamn: <br>
                     <input type="text" name="name" id="name" required/>
                 </label>
+                 <label>
+                    Kurskod: <br>
+                    <input type="text" name="code" id="code" required/>
+                </label>
                 <label>
                     Progression: <br>
-                    <input type="text" name="progression" id="progression"  required/>
+                    <select id="progression">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+
+                          </select>
                 </label>
                 <label >
                     Kursplan: <br>
