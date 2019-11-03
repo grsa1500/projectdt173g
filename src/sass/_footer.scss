@@ -1,0 +1,27 @@
+// Design for the footer
+
+
+#contact {
+    padding-bottom: 30px;
+    text-align: center;
+    line-height: 2;
+    font-size: 15px;
+    background: #1e161d;
+
+h3 {
+    color: #aa9aac;
+  }
+
+} 
+.contactflex {
+    display: flex;
+    max-width: 200px;
+    margin: auto;
+    font-size: 40px;
+    justify-content: space-between;
+  
+ a {
+    color: #e9e1bc;
+  }
+  }
+  

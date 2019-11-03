@@ -1,6 +1,8 @@
-# Moment 5.2 
+# Projekt DT173G
 
-## En webbsida som läser in API
+## Mitt CV
 
-På denna sida läses kurserna in från API i uppgift 5.1.
-Här kan man lägga till, ta bort och redigera kurserna.
+Denna sida är mitt projekt till kursen Webbutveckling III (DT173G).
+Webbplatsen läser in information från ett API som skapats till projektet.
+---
+Länk till Demo av webbplatsen: https://gsamuelsson.se/cv/

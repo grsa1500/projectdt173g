@@ -1,0 +1,263 @@
+
+
+//Animations
+
+.animated { 
+    -webkit-animation-duration: 1s; 
+    animation-duration: 1s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+} 
+
+
+.fadeInRight, .fadeInLeft, .fadeInUp, .fadeInDown{
+    opacity:0;
+    -webkit-transform: translateX(400px); 
+    transform: translateX(400px); 
+}
+
+
+
+/**********
+* Fade In *
+**********/ 
+@-webkit-keyframes fadeIn { 
+    0% {opacity: 0;} 
+    100% {opacity: 1;
+        display:block;} 
+} 
+@keyframes fadeIn { 
+    0% {opacity: 0;} 
+    100% {opacity: 1;
+        display:block;} 
+}
+.fadeIn{
+    opacity:0;
+}
+.fadeIn.go { 
+    -webkit-animation-name: fadeIn; 
+    animation-name: fadeIn; 
+}
+
+
+
+/*************
+* FadeInLeft *
+*************/
+
+@-webkit-keyframes fadeInLeft { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateX(-400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateX(0); 
+    } 
+} 
+@keyframes fadeInLeft { 
+    0% { 
+        opacity: 0; 
+        transform: translateX(-400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+} 
+.fadeInLeft{ 
+    opacity: 0; 
+    -webkit-transform: translateX(-400px); 
+    transform: translateX(-400px);
+  
+}
+.fadeInLeft.go { 
+    -webkit-animation-name: fadeInLeft; 
+      animation-name: fadeInLeft; 
+}
+
+
+/*************
+* FadeInRight *
+*************/
+
+@-webkit-keyframes fadeInRight { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateX(400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateX(0); 
+    } 
+} 
+@keyframes fadeInRight { 
+    0% { 
+        opacity: 0; 
+        transform: translateX(400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+} 
+.fadeInRight{ 
+    opacity: 0; 
+    -webkit-transform: translateX(400px); 
+    transform: translateX(400px);
+}
+.fadeInRight.go { 
+    -webkit-animation-name: fadeInRight; 
+    animation-name: fadeInRight; 
+}
+
+/*************
+* FadeInUp *
+*************/
+
+@-webkit-keyframes fadeInUp { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+@keyframes fadeInUp { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+.fadeInUp{ 
+    opacity: 0; 
+    -webkit-transform: translateY(400px); 
+    transform: translateY(400px);
+}
+.fadeInUp.go { 
+    -webkit-animation-name: fadeInUp; 
+    animation-name: fadeInUp; 
+}
+
+/*************
+* FadeInDown *
+*************/
+
+@-webkit-keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+@keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+.fadeInDown{ 
+    opacity: 0; 
+    -webkit-transform: translateY(-400px); 
+    transform: translateY(-400px);
+}
+.fadeInDown.go { 
+    -webkit-animation-name: fadeInDown; 
+    animation-name: fadeInDown; 
+}
+
+
+
+
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes grow {
+        0% {width: 0;}
+        100% {width: 50%;}
+      }
+      
+      /* Standard syntax */
+      @keyframes grow{
+        0% {width: 0;}
+        100% {width: 50%;}
+      }
+
+      .grow {
+  opacity: 0;
+      
+            }
+
+      .grow.go {
+        opacity: 100;
+  -webkit-animation-name: grow; /* Safari 4.0 - 8.0 */
+  animation-name: grow;
+  animation-duration: 2s;
+
+      }
+
+
+      
+  /* Safari 4.0 - 8.0 */
+@-webkit-keyframes blinking {
+    0% {opacity: 100;}
+    50% {opacity: 0.01;}
+    100% {opacity: 100;}
+  }
+  
+  /* Standard syntax */
+  @keyframes blinking {
+    0% {opacity: 100;}
+    50% {opacity: 0.01;}
+    100% {opacity: 100;}
+  }
+
+    /* Safari 4.0 - 8.0 */
+@-webkit-keyframes blinking2 {
+  0% {opacity: 100;}
+  50% {opacity: 0.5;}
+  100% {opacity: 100;}
+}
+
+/* Standard syntax */
+@keyframes blinking2 {
+  0% {opacity: 100;}
+  50% {opacity: 0.5;}
+  100% {opacity: 100;}
+}
+ 

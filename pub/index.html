@@ -1,83 +1,210 @@
-<html >
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://kit.fontawesome.com/c2054d9afc.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="css/style.css">
-    <title>Moment 5</title>
+    <script src="https://kit.fontawesome.com/c2054d9afc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kirang+Haerang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Codystar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <title>Greta Samuelsson</title>
 </head>
 
 <body>
-   
+    <div id="pinContainer" class="container">
+<!--Menu-->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">HEM</a></li>
+                <li><a href="#education">Kunskaper</a></li>
+                <li><a href="#education">Utbildning</a></li>
+                <li><a href="#projekt">Projekt</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-        
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="innermodal"></div>
-          </div>
-        
+<!--Mobile Menu-->
+        <nav class="mobilenavbar" id="mobileMenu">
+
+            <a id="closed" href="javascript:void(0);" class="icon" onclick="openMenu()">
+                <i class="fa fa-bars"></i></a>
+            <a id="opened" href="javascript:void(0);" class="icon" onclick="openMenu()"> <i class="fas fa-times"></i>
+            </a>
+
+        </nav>
+
+        <ul id="allLinks">
+            <li><a id="homelink" href="#" onclick="openMenu()">HEM</a></li>
+            <li><a id="skillslink" href="#skills" onclick="openMenu()">Kunskaper</a></li>
+            <li><a id="educationlink" href="#education" onclick="openMenu()">Utbildning</a></li>
+            <li><a id="projektlink" href="#projekt" onclick="openMenu()">Projekt</a></li>
+            <li><a id="contactlink" href="#contact" onclick="openMenu()">Kontakt</a></li>
+        </ul>
+
+ <!--Header-->    
+    <div id="home" class="section parallax-container animatedParent animateOnce" data-sequence='200'>
+
+            <div class='parallax-layer layer-0' data-parallax-speed="0.05" data-max-scroll="1000"></div>
+            <div data-id='1' class="animated fadeIn parallax-layer layer-10" data-parallax-speed="0.2"
+                data-max-scroll="1000">
+                <h1>Greta Samuelsson</h1>
+                <h2>Webbutveckling & Grafisk design</h2>
+            </div>
+            <div class='parallax-layer layer-4' data-parallax-speed="0.4" data-max-scroll="1000"></div>
+            <div class='parallax-layer layer-5' data-parallax-speed="0.5" data-max-scroll="1000"></div>
+            <div class='parallax-layer layer-1' data-parallax-speed="0.4" data-max-scroll="1000"></div>
+            <div class='parallax-layer layer-2' data-parallax-speed="0.35" data-max-scroll="1000"></div>
+            <div class='parallax-layer layer-3' data-parallax-speed="0.2" data-max-scroll="1000"></div>
+
+            <div class=' parallax-layer layer-6' data-parallax-speed="0.3" data-max-scroll="1000"></div>
+            <div class='parallax-layer layer-7' data-parallax-speed="0.5" data-max-scroll="1000"></div>
+            <div class='parallax-layer layer-8' data-parallax-speed="0.6" data-max-scroll="1000"></div>
+
+
+
+
         </div>
-    <div class="container">
-            <h1>Moment 5 - Webbtjänster</h1>
-            <h2><i class="fas fa-list"></i> Kurser jag läst</h2>
+<!--Mobile Header-->
+        <div id="mobileheader">
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Kursnamn</th>
-                        <th>Kurskod</th>
-                        <th>Progression</th>
-                        <th>Kursplan</th>
-                        <th>Ändra / Ta bort</th>
-                    
-                    </tr>
+            <div class="headerlayer1"></div>
+            <div class="headerlayer2"></div>
+            <div class="headerlayer3"></div>
+            <div class="headerlayer4"></div>
+            <div class="headerlayer5">
+                <h1>Greta Samuelsson</h1>
+                <h2>Webbutveckling & Grafisk design</h2>
+            </div>
+
+
+        </div>
+
+        <div class="parallax__cover" id="hello">
+            <div class='parallax-layer layer-9'></div>
+ <!-- About me section-->           
+            <div id="skills">
+                <h3>Om mig</h3>
+                <p>Mitt namn är Greta, jag är 23 år och bor i Karlstad. Jag är just nu över halvvägs i min utbildning
+                    för att bli webbutvecklare. Jag har stort intresse av programmering och webb/grafisk design. Vid
+                    sidan av utbildningen jobbar jag även. Nedan kan du se vad jag har kunskaper inom samt projekt jag
+                    jobbat på.</p><br><br>
+                <div class="knowledgeflex">
+
+                    <div class="one  animatedParent animateOnce" data-sequence='300'>
+                        <h5 class="one animated fadeIn" data-id='1'>HTML</h5>
+                        <h5 class="one animated fadeIn" data-id='2'>CSS</h5>
+                        <h5 class="one animated fadeIn" data-id='3'>SASS</h5>
+                        <h5 class="one animated fadeIn" data-id='4'>PHP</h5>
+                        <h5 class="one animated fadeIn" data-id='5'>SQL</h5>
+                        <h5 class="one animated fadeIn" data-id='6'>NodeJS</h5>
+                        <h5 class="one animated fadeIn" data-id='7'>Wordpress</h5>
+                        <h5 class="one animated fadeIn" data-id='8'>Gulp</h5>
+
+
+                    </div>
+                    <div class="two animatedParent animateOnce" data-sequence='300'>
+                        <h5 class="one animated fadeIn" data-id='1'>Adobe Photoshop</h5>
+                        <h5 class="one animated fadeIn" data-id='2'>Adobe Lightroom</h5>
+                        <h5 class="one animated fadeIn" data-id='3'>Adobe XD</h5>
+                        <h5 class="one animated fadeIn" data-id='4'>Adobe Illustrator</h5>
+
+                    </div>
+                    <div class="three  animatedParent animateOnce" data-sequence='300'>
+                        <h5 class="one animated fadeIn" data-id='1'>Svenska</h5>
+                        <h5 class="one animated fadeIn" data-id='2'>Engelska</h5>
+                        <h5 class="one animated fadeIn" data-id='3'>Ryska</h5>
+                    </div>
+
+
+                </div>
+
+                <img id="mediumborder" src="img/bordermedium.png" alt="">
+
+            </div>
+<!--education section-->
+            <div id="education">
+
+                <h3>Utbildning & Arbetserfarenhet</h3>
+
+                <h3 class="smaller">Avslutad Utbildning</h3>
+
+                <table>
+         
+                        <tr>
+                            <th>Kursnamn</th>
+                            <th>Skola</th>
+                            <th class="program">Program</th>
+                            <th class="points">Poäng</th>
+                            <th class="dates">Datum</th>
+
+                        </tr>
                     <tbody id="courseList">
 
-                   
-                            </tbody>
-                </thead>
-                <tbody id="coursesOutput"></tbody>
-            </table>
 
-        <section>
-                <h2><i class="fa fa-pen"></i> Lägg till kurs</h2>
-              
-               
-                <label >
-                    Kursnamn: <br>
-                    <input type="text" name="name" id="name" required/>
-                </label>
-                 <label>
-                    Kurskod: <br>
-                    <input type="text" name="code" id="code" required/>
-                </label>
-                <label>
-                    Progression: <br>
-                    <select id="progression">
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
+                    </tbody>
+     <!--Space for putting API data-->             
+                    <tbody id="coursesOutput"></tbody>
+                </table>
 
-                          </select>
-                </label>
-                <label >
-                    Kursplan: <br>
-                    <input type="text" name="syllabus" id="syllabus" required/>
-                </label>
-                <input type="submit" value="Lägg till" id="submitbutton" class="btn btn-blue">
-            </section>
-    
-</div>
-<footer>
-    Webbutveckling III <br>
-    Greta Samuelsson - 2019
-</footer>
-    <script src="js/main.js"></script>
+                <h3 class="smaller">Arbetserfarenhet</h3>
+
+                <table>
+                  
+                        <tr>
+                            <th>Jobbtitel</th>
+                            <th>Arbetsplats</th>
+                            <th>Datum</th>
+
+                        </tr>
+                    <tbody id="jobList">
+
+
+                    </tbody>
+              <!--Space for putting API data-->            
+                    <tbody id="jobOutput"></tbody>
+                </table>
+                <img id="lightborder" src="img/borderlight.png" alt="">
+            </div>
+
+<!--Projects section-->
+            <div id="projekt">
+                <h3>Projekt</h3>
+                <!--Space for putting API data-->       
+                <div class="innerflex" id="ProjectList">
+
+
+                </div>
+                <img id="lightborder2" src="img/footer.png" alt="">
+            </div>
+
+            <!--Contact/footer-->
+            <div id="contact">
+                <h3>Kontakt</h3>
+
+                <div class="contactflex">
+                    <a href="mailto:gsamuelsson@hotmail.se"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/gretas_design/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/grsa1500/"><i class="fab fa-github"></i></a>
+
+                </div>
+
+                © Copyright Greta Samuelsson, 2019
+            </div>
+        </div>
+
+
+    </div>
+    <div id="test">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
+        <script src="css3-animate-it.js"></script>
+        <script src="js/main.js"></script>
+    </div>
 </body>
 
 </html>

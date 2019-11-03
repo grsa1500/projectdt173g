@@ -1,0 +1,318 @@
+// Header for mobile
+#mobileheader {
+    display: none;
+  }
+  
+  .mobile {
+    display: none;
+  }
+
+
+ // For screens smaller than 900px 
+@media screen and  (max-width: 900px) {
+
+    .innerflex {
+      display: block;
+    }
+    
+    .dates, .points {
+      display: none;
+    }
+    
+    .projekt {
+      width: 100%;
+      max-width: 700px;
+      margin: auto;
+    }
+.navbar {
+    display: none;
+}
+    .mobilenavbar {
+        display: block;
+        padding-right: 30px;
+    }
+
+
+    }
+
+// For screens smaller than 700px    
+    @media screen and  (max-width: 700px) {
+    
+      .program {
+        display: none;
+      }
+    
+    .mobile {
+      display: block;
+    }
+    
+      h1 {
+        font-size: 70px;
+      }
+    
+      h3 {
+        font-size: 40px;
+      }
+      
+    
+      .parallax-container {
+        height: 600px;
+    
+        background: url(../img/background.png);
+        background-size: 100vw;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        display:none;
+        
+      }
+    
+      #mobileheader {
+        background: url(../img/mobilebackground.png);
+        position: absolute;
+        top:0;
+        height: 600px;
+        width: 100vw;
+        display: block;
+        
+      }
+    
+      .headerlayer1 {
+        background: url(../img/mobileheader.png);
+        top:0;
+        height: 100%;
+        width: 100vw;
+        background-position: bottom;
+        position: absolute;
+        background-size: 100vw;
+        background-repeat: no-repeat;
+      }
+    
+    
+      .headerlayer2 {
+        background: url(../img/1.png);
+        top:0;
+        height: 100%;
+        width: 100vw;
+        background-position: top;
+        position: absolute;
+        background-size: 100vw;
+        background-repeat: no-repeat;
+    
+        -webkit-animation-name: blinking; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 6.24s; /* Safari 4.0 - 8.0 */
+        animation-name: blinking;
+       
+        animation-duration: 6.24s;
+        animation-iteration-count: infinite;
+    
+      }
+    
+      .headerlayer3 {
+        background: url(../img/2.png);
+        top:0;
+        height: 100%;
+        width: 100vw;
+        background-position: center;
+        position: absolute;
+        background-size: 100vw;
+        background-repeat: no-repeat;
+    
+        -webkit-animation-name: blinking; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 3.22s; /* Safari 4.0 - 8.0 */
+        animation-name: blinking;
+       
+        animation-duration: 3.22s;
+        animation-iteration-count: infinite;
+    
+      }
+    
+      .headerlayer4 {
+        background: url(../img/3.png);
+        top:0;
+        height: 100%;
+        width: 100vw;
+        background-position: center;
+        position: absolute;
+        background-size: 100vw;
+        background-repeat: no-repeat;
+    
+        -webkit-animation-name: blinking; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 3.22s; /* Safari 4.0 - 8.0 */
+        animation-name: blinking;
+        animation-delay: 150ms;
+       
+        animation-duration: 3.22s;
+        animation-iteration-count: infinite;
+    
+      }
+    
+      .headerlayer5 {
+        height: 100%;
+        width: 100vw;
+        margin-top: -70px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+    
+      }
+    
+    
+      .parallax-layer {
+        display:none;
+      }
+      
+      .layer-2{
+        height: 100vh;
+        top: -60vh;
+        display: block;
+      }
+    
+      .layer-1 {
+        height: 100vh;
+        top: -40vh;
+        display: block;
+      }
+    
+      .parallax__cover {
+      
+        top: 600px;
+        z-index: 100;
+        margin-top: -5px;
+    
+        
+        
+      }
+    
+      #skills {
+      
+        position: relative;
+      }
+    .projekt {
+      display: block;
+      width: 100%;
+    }
+    
+    .projekt  div {
+      width: 100%;
+    }
+    .desktop{
+    display: none;
+    
+    }
+    
+    .projekt h3 {
+      width: 100%;
+      text-align: left;
+    }
+    
+    .projekt img {
+      width: 70%;
+      z-index: 100;
+      position: relative;
+    
+    
+    }
+    
+    .projekt p, .projekt h3 {
+      color: white!important;
+      padding: 20px;
+    }
+    
+    .mobile {
+      width: 80%;
+      margin: auto;
+      display: block;
+    }
+    
+    .source, .demo {
+      color: white;
+      border-color: white;
+    
+    margin-left: 0;
+    margin: 5px;
+    }
+    
+    .textbox {
+      background: #423742;
+    display: block;
+      text-align: center;
+      position: relative;
+      padding-top: 100px;
+      margin-top: -100px;
+      padding-bottom: 200px;
+      margin-bottom: -140px;
+    
+    
+    
+    }
+    
+    .innerflex {
+      display: block;
+    }
+    
+    
+    
+    #projekt {
+     
+      height: auto;
+    padding-bottom: 150px;
+    
+    }
+    
+    .keyword {
+      color: white;
+    }
+    
+    
+    .projekt {
+      display: block;
+      height: auto;
+    
+    }
+    
+    
+    .knowledgeflex {
+      display: block;
+      text-align: center;
+    }
+    
+    .knowledgeflex div {
+      margin-bottom: 25px;
+    }
+    
+    #lightborder {
+     
+      width: 160%;
+      right:0;
+    
+    }
+    
+    
+    
+    
+    }
+ // For screens smaller than 400px   
+    @media screen and  (max-width: 400px) {
+    
+      #lightborder {
+     
+        width: 200%;
+        right:0;
+      
+      }
+    
+      h1 {
+        font-size: 50px;
+      }
+    
+      table {
+       font-size: 14px;
+      
+      
+      }
+      
+    }
+    
+    

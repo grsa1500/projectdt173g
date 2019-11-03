@@ -1,187 +1,87 @@
-"use strict";
+const url = "https://gsamuelsson.se/projektAPI/webservice.php";
+let coursesurl =url+'/courses';
+let jobsurl =  url+'/jobs';
+let projectsurl = url+'/projects';
 
-const url = "http://studenter.miun.se/~grsa1500/dt173g/moment5/part1/webservice.php/courses";
-document.getElementById("submitbutton").addEventListener("click", addCourse);
+window.onload = start;
 
-window.onload = loadCourseList;
-
-
-function loadCourseList() {
- 
-  fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-          let output = "";    
-
-          data.forEach(function (course) {
-              output += `<tr>
-                  <td>${course.name}</td>
-                  <td>${course.code}</td>
-                  <td>${course.progression}</td>
-                  <td><a href='${course.syllabus}' title='Kursplan för ${course.code}' target='_blank'><i class="fas fa-link"></i>  Kursplan </a></td>
-                  <td class="center"><a onclick="myFunction(event)" title='Redigera ${course.code}' target='_blank'><i id="${course.id}" class="fas fa-cog"></i></a> / <a class="delete" onclick="deleteCourse(event)"  title='Ta bort  ${course.code}' target='_blank'> <i id="${course.id}" class="fas fa-trash-alt"></i></a></td>
-              </tr>`;
-          })
-          document.getElementById("courseList").innerHTML = output;
-      })
+// When window loads
+function start(){
+    loadJobList();
+loadCourseList();
+loadProjectList();
 }
 
-//Adding a course
-function addCourse() {
-    
-    let code = document.getElementById("code").value;
-    let name = document.getElementById("name").value;
-    let progression = document.getElementById("progression").value;
-    let syllabus = document.getElementById("syllabus").value;
 
-   
-
-        let jsonStr = JSON.stringify({
-            "code": code,
-            "name": name,
-            "progression": progression,
-            "syllabus": syllabus
-        });
+// Getting all courses
+function loadCourseList() {
 
 
+    fetch(coursesurl)
+        .then((res) => res.json())
+        .then((data) => {
+            let output = "";    
+  
+            data.forEach(function (course) {
+                output += `<tr>
+                    <td>${course.name}</td>
+                    <td>${course.school}</td>
+                    <td class="program">${course.program}</td>
+                    <td class="points">${course.points}</td>
+                    <td class="dates">${course.startyear} - ${course.endyear}</td>
+                   
+                </tr>`;
+            })
+            document.getElementById("courseList").innerHTML = output;
+        })
+ }
 
-        fetch(url, {
-            method: 'POST',
-            mode: 'cors',
-           
-            body: jsonStr
-        }).then((res) => res.json())
-            .then((data) => location.reload(true))
-           
-    }
 
-
-
-    function myFunction(event) {
-        let space = document.getElementById('modalspace');
-        var modal = document.getElementById("myModal");
-        var innermodal = document.getElementById("innermodal");
+// getting all jobs
+        function loadJobList() {
+ 
+            fetch(jobsurl)
+                .then((res) => res.json())
+                .then((data) => {
+                    let output = "";    
+          
+                    data.forEach(function (job) {
+                        output += `<tr>
+                            <td>${job.title}</td>
+                            <td>${job.place}</td>
+                          
+                            <td>${job.startyear} - ${job.endyear}</td>
+                           
+                        </tr>`;
+                    })
+                    document.getElementById("jobList").innerHTML = output;
+                })
+          }
+ 
+// Getting all projects
+          function loadProjectList() {
+ 
+            fetch(projectsurl)
+                .then((res) => res.json())
+                .then((data) => {
+                    let output = "";    
+          
+                    data.forEach(function (project) {
+                        output += `<div class="projekt"
+                        ><br><br>
+                        <div class="imgbackground">
+                                <img src="img/${project.imgmobile}" alt=""   class="mobile">
+                            <img src="img/${project.img}" alt=""   class="desktop"></div>
+                          
+                        <div class="textbox"  >
+                            <h3>${project.title}</h3>
+                            <div class="line"></div>
+                            <p>${project.description}</p>
+                                <span class="keyword">${project.keywords}</span>                      <br><br><a href="${project.url}" class="demo" target="_blank">Demo</a> <br><br>
+                        </div></div>`;
+                    })
+                    document.getElementById("ProjectList").innerHTML = output;
+                })
+          }
  
 
-        modal.style.display = "flex";
-       
-        let id = event.target.id;
-
-        console.log(id);
-
-        
-    var span = document.getElementsByClassName("close")[0];
-
-
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-    let oneUrl = url + '/' + id;
-
-    fetch(oneUrl)
-      .then((res) => res.json())
-      .then((data) => {
-          
-
-          data.forEach(function (course) {
-            let name = course.name;
-            let code = course.code;
-            let syllabus = course.syllabus;
-            let progression = course.progression;
-
-            innermodal.innerHTML = `<section>
-    <h2><i class="fa fa-cog"></i> Ändra kurs</h2>
-  
-   
-    <label >
-        Kursnamn: <br>
-        <input type="text" name="nameedit" id="nameedit" value="${name}" required/>
-    </label>
-     <label>
-        Kurskod: <br>
-        <input type="text" name="codeedit" id="codeedit" value="${code}" required/>
-    </label>
-    <label>
-        Progression: <br>
-        <select id="progressionedit">
-            
-
-        <option value="A">A</option>
-        <option value="B">B</option>
-        <option value="C">C</option>
-
-      </select>
-    </label>
-    <label >
-        Kursplan: <br>
-        <input type="text" name="syllabusedit" id="syllabusedit" value="${syllabus}" required/>
-    </label>
-    <input type="submit" value="Ändra" onclick="editCourse(${course.id})"  id="editbutton" class="btn btn-blue">
-</section>`;
-
-let select = document.getElementById('progressionedit');
-
-select.value = progression;
-                  
-          })
-          
-      })
-    }
-
-
-    function deleteCourse(event) {
-        let id = event.target.id;
-
-
-        let deleteUrl = url + '/' + id;
-
-        console.log(deleteUrl);
-
-         fetch(deleteUrl, {
-             method: 'DELETE',
-           
-        }).then((res) => res.json())
-            .then((data) => location.reload(true))
-    }
-
-
-    function editCourse(id) {
-
-        console.log(id);
-        let code = document.getElementById("codeedit").value;
-        let name = document.getElementById("nameedit").value;
-        let progression = document.getElementById("progressionedit").value;
-        let syllabus = document.getElementById("syllabusedit").value;
-    
-       console.log(code, name, progression, syllabus);
-    
-            let jsonStr = JSON.stringify({
-                "code": code,
-                "name": name,
-                "progression": progression,
-                "syllabus": syllabus,
-                "id": id
-            });
-    
-    
-    console.log(jsonStr);
-            fetch(url, {
-                method: 'PUT',
-                mode: 'cors',
-               
-                body: jsonStr
-            }).then((res) => res.json())
-                .then((data) => location.reload(true))
-               
-        }
-        
-
-    
